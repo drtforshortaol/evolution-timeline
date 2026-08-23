@@ -27,4 +27,4 @@ v3 update system:
 
 v4: Completed date protocol for major storyline events; added estimated eukaryotic diversification, secondary endosymbiosis timing and detailed Learn More explanation, photosynthetic stramenopile interval, and estimated brown-algal diversification.
 
-v5: Simplified the post-LECA story into three explicitly labeled teaching pathways; removed the technical red-derived-plastid/stramenopile steps from the main timeline; retained complexity and scientific caution inside Learn More for secondary endosymbiosis.
+v6: Simplified the post-LECA story into three explicitly labeled teaching pathways; removed the technical red-derived-plastid/stramenopile steps from the main timeline; retained complexity and scientific caution inside Learn More for secondary endosymbiosis.
