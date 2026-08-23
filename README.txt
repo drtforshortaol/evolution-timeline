@@ -23,3 +23,6 @@ This build is intentionally independent from the EVO Hub. Its content and file s
 v3 update system:
 - Network-first service worker: when online, the app prefers the newest GitHub Pages files; cache is used offline.
 - Refresh / Check for Updates button clears the app cache and reloads the newest published build.
+
+
+v4: Completed date protocol for major storyline events; added estimated eukaryotic diversification, secondary endosymbiosis timing and detailed Learn More explanation, photosynthetic stramenopile interval, and estimated brown-algal diversification.

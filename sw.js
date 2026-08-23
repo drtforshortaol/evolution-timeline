@@ -1,4 +1,4 @@
-const CACHE = 'evolution-timeline-v3';
+const CACHE = 'evolution-timeline-v4';
 const ASSETS = [
   './',
   './index.html',
