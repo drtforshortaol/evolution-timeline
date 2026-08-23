@@ -69,4 +69,45 @@ const installBtn=document.getElementById('installBtn');
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;installBtn.hidden=false;});
 installBtn.addEventListener('click',async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;installBtn.hidden=true;});
 
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));}
+const refreshApp = document.getElementById('refreshApp');
+const updateStatus = document.getElementById('updateStatus');
+
+async function refreshToLatest(){
+  refreshApp.disabled = true;
+  const original = refreshApp.textContent;
+  refreshApp.textContent = 'Checking…';
+  updateStatus.textContent = 'Checking GitHub for the newest version…';
+  try {
+    if ('serviceWorker' in navigator) {
+      const reg = await navigator.serviceWorker.getRegistration('./');
+      if (reg) {
+        await reg.update();
+        if (reg.waiting) reg.waiting.postMessage({type:'SKIP_WAITING'});
+      }
+    }
+    if ('caches' in window) {
+      const keys = await caches.keys();
+      await Promise.all(keys.filter(k=>k.startsWith('evolution-timeline-')).map(k=>caches.delete(k)));
+    }
+    updateStatus.textContent = 'Updating…';
+    const url = new URL(location.href);
+    url.searchParams.set('refresh', Date.now().toString());
+    location.replace(url.toString());
+  } catch (err) {
+    updateStatus.textContent = 'Could not refresh. Check the internet connection and try again.';
+    refreshApp.disabled = false;
+    refreshApp.textContent = original;
+  }
+}
+refreshApp.addEventListener('click', refreshToLatest);
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load',async()=>{
+    try {
+      const reg = await navigator.serviceWorker.register('./sw.js');
+      // Ask the browser to check GitHub for a newer service worker on each online launch.
+      if (navigator.onLine) await reg.update();
+    } catch (_) {}
+  });
+}
+

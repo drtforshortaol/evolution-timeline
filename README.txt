@@ -18,3 +18,8 @@ Host the folder via HTTPS (for example GitHub Pages), open in Safari, then Share
 
 Status:
 This build is intentionally independent from the EVO Hub. Its content and file structure can later be incorporated into the hub.
+
+
+v3 update system:
+- Network-first service worker: when online, the app prefers the newest GitHub Pages files; cache is used offline.
+- Refresh / Check for Updates button clears the app cache and reloads the newest published build.
