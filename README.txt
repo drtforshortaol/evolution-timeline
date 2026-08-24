@@ -1,10 +1,10 @@
-Evolution Timeline PWA v10 — From Universe to Us
+Evolution Timeline PWA v11 — From Universe to Us
 
-v10 adds a new “Earth’s History in One Day” deep-time perspective near the conclusion.
-Earth’s 4.54-billion-year history is compressed into a 24-hour clock beginning at 12:00 AM, with each milestone showing its converted clock time and percentage of Earth history elapsed.
-Uncertain ancient events use clearly labeled representative dates only for the mathematical conversion.
+v11 refinements:
+- Color-coded borders inside each expanded focal story: green for Red/Green Algae & Plants, brown/copper for Brown Algae & Kelp, and blue for Animals & Fungi.
+- Adds a stripped-down LUCA-to-present synthesis showing the four focal destinations: modern red algae, green algae/plants, brown algae/kelp, and animals/humans.
+- The new synthesis and every concluding section after it are collapsed by default behind inviting accordion titles to reduce iPhone scrolling.
+- Closing accordions include: “See the Whole Story in 60 Seconds,” “Put 4.54 Billion Years on a 24-Hour Clock,” “Follow the Energy,” and “The Payoff — Why Kelp Is Not a Plant.”
+- On opening one concluding accordion, the others close automatically to preserve screen real estate.
 
-Other v8 features remain: Story by Groups, Strict Time Map, mobile story accordions, high-contrast time-map cards, universal Learn More sections, Follow the Energy synthesis, Moon giant-impact explanation, and Refresh / Check for Updates.
-
-
-v10 additions: expanded Follow the Energy for Cyanobacteria and Alphaproteobacteria; modern Alphaproteobacteria continuation; explicit separation of cyanobacterial and mitochondrial ancestry; Follow the Machinery/Lineage teaching framework; strengthened plant-vs-kelp conclusion.
+All v10 scientific content is retained, including Follow the Energy / Machinery / Lineage, modern Alphaproteobacteria and Cyanobacteria continuity, ATP cycling, the 24-hour Earth-history perspective, Story by Groups, Strict Time Map, and refresh/update behavior.
