@@ -1,30 +1,11 @@
-FROM UNIVERSE TO US — standalone PWA
+Evolution Timeline PWA v7
 
-Files:
-- index.html
-- styles.css
-- app.js
-- manifest.webmanifest
-- sw.js
-- icons/
-
-Run locally:
-PWAs need HTTP/HTTPS for service workers. From this folder run, for example:
-  python -m http.server 8080
-Then open http://localhost:8080
-
-On iPhone/iPad:
-Host the folder via HTTPS (for example GitHub Pages), open in Safari, then Share > Add to Home Screen.
-
-Status:
-This build is intentionally independent from the EVO Hub. Its content and file structure can later be incorporated into the hub.
-
-
-v3 update system:
-- Network-first service worker: when online, the app prefers the newest GitHub Pages files; cache is used offline.
-- Refresh / Check for Updates button clears the app cache and reloads the newest published build.
-
-
-v4: Completed date protocol for major storyline events; added estimated eukaryotic diversification, secondary endosymbiosis timing and detailed Learn More explanation, photosynthetic stramenopile interval, and estimated brown-algal diversification.
-
-v6: Simplified the post-LECA story into three explicitly labeled teaching pathways; removed the technical red-derived-plastid/stramenopile steps from the main timeline; retained complexity and scientific caution inside Learn More for secondary endosymbiosis.
+Main redesign:
+- Story by Groups is the default teaching view.
+- Strict Time Map is a second compact chronological view.
+- All information remains available through Learn More.
+- The post-LECA roadmap now gives equal highlighted containers to Animals/Fungi, Red/Green Algae & Plants, Brown Algae & Kelp, and Other Eukaryotes.
+- Moon Learn More now explains the giant-impact hypothesis.
+- Marine animals precede land plants; terrestrial arthropods and vertebrate land transitions are shown after early land plants.
+- Mitochondria and chloroplasts remain central teaching milestones.
+- Refresh/update system retained.
