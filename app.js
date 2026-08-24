@@ -44,6 +44,45 @@ brown:{name:'Brown Algae & Kelp',tag:'Secondary-endosymbiosis story',intro:'A re
 ]}
 };
 
+
+const earthDayRows = [
+['Earth forms','4.54 Ga','12:00:00 AM','0.00%'],
+['Moon forms','~4.50 Ga','12:12:41 AM','0.88%'],
+['Early crust & liquid water','~4.40 Ga','12:44:24 AM','3.08%'],
+['Origin of life (?)','perhaps ~4.25 Ga','1:31:59 AM','6.39%'],
+['FUCA-type stage (?)','perhaps ~4.22 Ga','1:41:30 AM','7.05%'],
+['LUCA','~4.20 Ga','1:47:50 AM','7.49%'],
+['Great split — Bacteria / Archaea','perhaps ~3.80 Ga','3:54:43 AM','16.30%'],
+['Cyanobacterial photosynthesis','~2.70 Ga','9:43:37 AM','40.53%'],
+['Great Oxidation Event','~2.40 Ga','11:18:46 AM','47.14%'],
+['Mitochondrial endosymbiosis','representative ~2.00 Ga','1:25:38 PM','55.95%'],
+['LECA','~1.70 Ga','3:00:48 PM','62.56%'],
+['Primary plastid / chloroplast','representative ~1.30 Ga','5:07:40 PM','71.37%'],
+['Red & green algal lineages','~1.00 Ga','6:42:49 PM','77.97%'],
+['Secondary endosymbiosis','representative ~1.00 Ga','6:42:49 PM','77.97%'],
+['Marine animals / Ediacaran','~600 Ma','8:49:42 PM','86.78%'],
+['Cambrian begins','~539 Ma','9:09:02 PM','88.13%'],
+['Land plants','~470 Ma','9:30:56 PM','89.65%'],
+['Early terrestrial arthropods','~440 Ma','9:40:26 PM','90.31%'],
+['Vascular plants','~425 Ma','9:45:12 PM','90.64%'],
+['Tetrapod transition toward land','~370 Ma','10:02:39 PM','91.85%'],
+['Seed plants','~350 Ma','10:08:59 PM','92.29%'],
+['Flowering plants','~130 Ma','11:18:46 PM','97.14%'],
+['Primates','~55 Ma','11:42:33 PM','98.79%'],
+['Kelp','~34 Ma','11:49:13 PM','99.25%'],
+['Hominins','~7 Ma','11:57:47 PM','99.85%'],
+['Earliest Homo','~2.8 Ma','11:59:07 PM','99.94%'],
+['Homo sapiens','~300 ka','11:59:54 PM','99.993%'],
+['Agriculture','~12 ka','11:59:59.77 PM','99.99974%'],
+['Writing','~5 ka','11:59:59.90 PM','99.99989%'],
+['Industrial Revolution','~250 years ago','11:59:59.995 PM','99.999994%'],
+['Today','0','12:00:00 AM','100%']
+];
+
+function earthDayHtml(){
+ return `<section class="earth-day"><div class="earth-day-head"><div><p class="eyebrow">Deep-time perspective</p><h2>🌎 Earth’s History in One Day</h2><p>If Earth’s 4.54-billion-year history is compressed into 24 hours, Earth forms at <strong>12:00 AM</strong> and TODAY arrives at <strong>12:00 AM the next day</strong>. The percentage shows how much of Earth history has elapsed when each milestone occurs.</p></div><div class="earth-day-clock">24 HOURS<br><strong>4.54 BILLION YEARS</strong></div></div><div class="earth-day-table" role="table" aria-label="Earth history compressed into 24 hours"><div class="earth-day-row earth-day-header" role="row"><div>Milestone</div><div>Real date</div><div>24-hour clock</div><div>Earth history elapsed</div></div>${earthDayRows.map(r=>`<div class="earth-day-row" role="row"><div class="earth-day-event">${esc(r[0])}</div><div data-label="Real date">${esc(r[1])}</div><div data-label="Clock"><strong>${esc(r[2])}</strong></div><div data-label="Elapsed"><strong>${esc(r[3])}</strong></div></div>`).join('')}</div><div class="earth-day-takeaway"><strong>Perspective:</strong> LUCA appears before 2 AM, oxygenation occurs before noon, mitochondria arrive in the early afternoon, chloroplasts around 5 PM, land plants around 9:31 PM, kelp around 11:49 PM, and <strong>Homo sapiens appears only about six seconds before midnight.</strong></div>${detailsHtml(['The clock times are mathematical conversions of the representative dates shown; they are not independent scientific date estimates.','For uncertain events such as the Great Split, mitochondrial endosymbiosis, primary plastid acquisition and secondary endosymbiosis, a representative point within the broad teaching range is used only to place the event on the 24-hour clock.','Calculation: percentage elapsed = (Earth age − years before present) ÷ Earth age × 100. Clock time = that fraction × 24 hours.','This compressed-day view counters a visual bias of long timelines: familiar modern events can occupy lots of screen space even though they occur extremely late in Earth history.'])}</section>`;
+}
+
 const otherDetails=['Eukaryotes diversified into many more lineages than the three teaching stories emphasized here.','Modern single-celled eukaryotes include amoebae, ciliates, dinoflagellates, diatoms, many flagellates and yeasts.','Choanoflagellates are especially useful because they are close living unicellular relatives of animals.','The presence of these lineages reminds us that evolution is a branching tree, not a ladder.'];
 
 const timeRows = [
@@ -61,6 +100,7 @@ function renderStory(){
  <div class="tree-roadmap"><h2>The Tree expands — selected lineages we will follow</h2><p class="roadmap-intro">Eukaryotes diversify into many lineages. These are four organized threads for teaching—not the only branches of the eukaryotic tree.</p><div class="roadmap-grid"><div class="road plastid"><h3>Red / Green Algae & Plants</h3><p>Primary endosymbiosis → chloroplast → red algae + green algae → land plants → flowers.</p></div><div class="road brown"><h3>Brown Algae & Kelp</h3><p>Red-algal contribution → secondary endosymbiosis → brown algae → much later kelp.</p></div><div class="road animals"><h3>Animals & Fungi</h3><p>Fungi continue independently; animals diversify in the sea, later move onto land, and much later give rise to humans.</p></div><div class="road other"><h3>Other Eukaryotes</h3><p>Many unicellular and other eukaryotic lineages continue independently → TODAY.</p></div></div><div class="crossover">Important crossover: <strong>Red algae stay in the primary-plastid thread and continue to TODAY.</strong> A red-algal lineage also contributes sideways to the brown-algal thread through secondary endosymbiosis.</div>${detailsHtml(['This roadmap organizes the story by group so an audience does not lose track of which lineage is being followed.','The Strict Time Map provides the second coordinate: when these events occurred relative to each other.','A source lineage can continue independently even when one descendant participates in endosymbiosis. Cyanobacteria and red algae are key examples.'])}</div>
  <div class="organelle-banner"><strong>☀️ CHLOROPLAST STORY BEGINS AFTER LECA</strong><br><span>A mitochondria-containing eukaryote later acquires cyanobacterial photosynthesis.</span></div>
  <div class="group-grid">${groupSection('plastid')}${groupSection('brown')}${groupSection('animals')}<section class="section-shell other-shell"><div class="section-head"><div><h2>Other Eukaryotic Lineages</h2><p>Many lineages outside the three focal stories remain important and continue to the present.</p></div><span class="thread-tag bacteria">Other lineages</span></div>${detailsHtml(otherDetails)}</section></div>
+ ${earthDayHtml()}
  <section class="energy-summary"><h2>⚡ Follow the Energy — the story in one flow</h2><div class="energy-flow"><div><strong>Life needs energy</strong><span>↓</span><b>☀️ Sunlight</b><span>↓</span><b>Photosynthesis captures energy</b><span>↓</span><b>Energy stored in organic molecules + O₂ released</b><span>↓</span><b>🌎 Oxygen changes Earth</b><span>↓</span><b>Aerobic respiration exploits O₂</b><span>↓</span><b>⚡ MITOCHONDRION</b><span>↓</span><b>ADP + Pi + energy → ATP</b><span>↓</span><b>ATP powers metabolism</b><span>↓</span><b>☀️ CHLOROPLAST</b><span>↓</span><b>Red & green algal lineages</b><span>↓</span><b>Different histories → plants and kelp</b></div></div><p class="energy-conclusion"><strong>Follow the energy:</strong> life evolves ways to capture energy, store it, release it and convert it into forms that power metabolism. Those innovations changed both life and the planet.</p>${detailsHtml(['Photosynthesis captures external solar energy and stores it as chemical energy in organic molecules.','Respiration releases part of that stored chemical energy and uses it to drive ADP + inorganic phosphate (Pi) → ATP.','ATP is immediately usable by the cell for metabolic work; when ATP is used, it returns to ADP + Pi and can be recharged.','The mitochondrial story emphasizes release and conversion of stored chemical energy; the chloroplast story emphasizes capture and storage of solar energy.'])}</section>
  <section class="payoff"><h2>Why kelp is not a plant</h2><div class="compare"><div><h3>🌼 Plant route</h3><p>Cyanobacterium → primary endosymbiosis → chloroplast → <strong>green lineage</strong> → land plants → flowering plants.</p></div><div><h3>🌿 Kelp route</h3><p>Cyanobacterium → primary plastid → <strong>red-algal lineage</strong> → secondary endosymbiosis → brown-algal lineage → kelp.</p></div></div>${detailsHtml(['Plants and kelp both photosynthesize, and both ultimately trace plastid ancestry to cyanobacteria.','They are nevertheless members of different eukaryotic lineages with different evolutionary histories.','The visual similarity of kelp blades, stipes and holdfasts to plant leaves, stems and roots reflects convergent solutions, not close plant ancestry.'])}</section>`;
  applyVisibility();

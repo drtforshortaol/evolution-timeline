@@ -1,11 +1,7 @@
-Evolution Timeline PWA v8
+Evolution Timeline PWA v9 — From Universe to Us
 
-Changes from v7:
-- Mobile story groups are collapsed accordions; only one focal story opens at a time.
-- Focal story order is Red/Green Algae & Plants, Brown Algae & Kelp, Animals & Fungi.
-- Strict Time Map has higher-contrast dates/titles and more distinct lineage colors.
-- Removed the unnecessary “prokaryote is not a domain” teaching detour.
-- Expanded mitochondrial energy explanation: ADP + Pi + energy → ATP.
-- Added “Follow the Energy” synthesis near the conclusion.
-- Moon giant-impact explanation remains in Learn More.
-- Refresh/update system retained.
+v9 adds a new “Earth’s History in One Day” deep-time perspective near the conclusion.
+Earth’s 4.54-billion-year history is compressed into a 24-hour clock beginning at 12:00 AM, with each milestone showing its converted clock time and percentage of Earth history elapsed.
+Uncertain ancient events use clearly labeled representative dates only for the mathematical conversion.
+
+Other v8 features remain: Story by Groups, Strict Time Map, mobile story accordions, high-contrast time-map cards, universal Learn More sections, Follow the Energy synthesis, Moon giant-impact explanation, and Refresh / Check for Updates.
