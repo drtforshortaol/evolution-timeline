@@ -133,3 +133,14 @@ main{max-width:1120px;margin:auto;padding:22px clamp(14px,3vw,28px) 40px}.contro
  #storyView .lineage-pillars>.story-accordion:not([open]),#storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{min-height:138px}
  #storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{padding:10px 6px 18px}
 }
+
+/* Second spacing pass: slightly tighter closed cards only */
+#storyView .spine .event-accordion:not([open]){min-height:60px}
+#storyView .spine .event-accordion:not([open])>summary{min-height:60px;padding:7px 16px}
+#storyView .spine .event-list{gap:7px}
+#storyView .lineage-pillars>.story-accordion:not([open]){min-height:114px}
+#storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{min-height:114px;padding:10px 12px 17px}
+@media(max-width:670px){
+ #storyView .lineage-pillars>.story-accordion:not([open]),#storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{min-height:120px}
+ #storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{padding:8px 5px 16px}
+}
