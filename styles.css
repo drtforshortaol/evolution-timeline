@@ -145,13 +145,26 @@ main{max-width:1120px;margin:auto;padding:22px clamp(14px,3vw,28px) 40px}.contro
  #storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{padding:8px 5px 16px}
 }
 
-/* Branch continuity: expanded panels remain anchored to their own lineage lanes */
-@media(min-width:821px){
- #storyView .lineage-pillars>.story-accordion[open]{min-width:0;max-width:100%}
- #storyView .lineage-pillars>.brown-shell[open]{grid-column:1 / span 2;justify-self:start;width:88%}
- #storyView .lineage-pillars>.plastid-shell[open]{grid-column:1 / -1;justify-self:center;width:72%}
- #storyView .lineage-pillars>.animals-shell[open]{grid-column:2 / span 2;justify-self:end;width:88%}
+/* Keep all lineage headers in their fixed columns even when one opens.
+   Each body unfolds DOWNWARD beneath its own header rather than shifting siblings. */
+#storyView .lineage-pillars{align-items:start}
+#storyView .lineage-pillars>.brown-shell{grid-column:1}
+#storyView .lineage-pillars>.plastid-shell{grid-column:2}
+#storyView .lineage-pillars>.animals-shell{grid-column:3}
+#storyView .lineage-pillars>.story-accordion[open]{
+  width:100%;min-width:0;max-width:100%;justify-self:stretch;
+  align-self:start;grid-row:auto;
 }
-@media(max-width:820px){
- #storyView .lineage-pillars>.story-accordion[open]{grid-column:1 / -1;width:100%;justify-self:stretch}
+#storyView .lineage-pillars>.story-accordion[open]>.story-summary{
+  min-height:0;
+}
+#storyView .lineage-pillars>.story-accordion .story-body{
+  overflow-wrap:anywhere;
+}
+@media(max-width:700px){
+ #storyView .lineage-pillars{grid-template-columns:1fr}
+ #storyView .lineage-pillars>.brown-shell,
+ #storyView .lineage-pillars>.plastid-shell,
+ #storyView .lineage-pillars>.animals-shell{grid-column:1}
+ #storyView .lineage-pillars>.story-accordion[open]{grid-column:1}
 }
