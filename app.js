@@ -113,7 +113,11 @@ function renderTools(){toolsView.innerHTML=`<section class="section-shell tools-
 function renderTime(){timeView.innerHTML=`<section class="time-map"><h2>Strict Time Map — all threads on one clock</h2><p class="time-intro">This view deliberately ignores grouping. Older events are above younger events, so marine animals, land plants, land animals, flowers, kelp and humans can be compared directly.</p><div class="time-rows">${timeRows.map(r=>`<div class="time-row ${r[2]}"><div class="time-date">${esc(r[0])}</div><div class="time-mark"></div><div class="time-label"><strong>${esc(r[1])}</strong><span class="time-badge">${esc(r[2])}</span></div></div>`).join('')}</div></section>`}
 function applyVisibility(){/* Context and uncertainty are always shown when an event is expanded. */}
 renderStory();renderTime();renderTools();
-function configureStoryAccordions(){const stories=[...storyView.querySelectorAll('.story-accordion')];const mobile=window.matchMedia('(max-width:820px)').matches;if(mobile){stories.forEach(d=>d.removeAttribute('open'));stories.forEach(d=>d.addEventListener('toggle',()=>{if(!d.open)return;stories.forEach(o=>{if(o!==d)o.removeAttribute('open')})},{once:false}))}else{stories.forEach(d=>d.setAttribute('open',''))}}
+function configureStoryAccordions(){
+ // Independent lineage panels: opening one never closes or moves another.
+ // Start with all three collapsed so visitors can choose comparisons.
+ storyView.querySelectorAll('.story-accordion').forEach(panel=>panel.removeAttribute('open'));
+}
 configureStoryAccordions();
 function configureClosingAccordions(){const panels=[...toolsView.querySelectorAll('.closing-accordion')];panels.forEach(d=>d.removeAttribute('open'));panels.forEach(d=>d.addEventListener('toggle',()=>{if(!d.open)return;panels.forEach(o=>{if(o!==d)o.removeAttribute('open')})}))}
 configureClosingAccordions();
