@@ -74,3 +74,10 @@ main{max-width:1120px;margin:auto;padding:22px clamp(14px,3vw,28px) 40px}.contro
 .lineage-pillars>.story-accordion[open]{grid-column:1/-1}
 .lineage-pillars>.other-shell{grid-column:1/-1}
 @media(max-width:670px){.group-grid.lineage-pillars{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.lineage-pillars>.story-accordion:not([open]),.lineage-pillars>.story-accordion:not([open])>.story-summary{min-height:175px}.lineage-pillars>.story-accordion:not([open])>.story-summary{padding:15px 9px;align-items:flex-start}.lineage-pillars .story-summary strong{font-size:.9rem}.lineage-pillars .story-summary small{font-size:.74rem}.lineage-pillars .story-arrow{font-size:1rem}}
+
+/* MBA global navigation: top-left Hub button, same ocean-blue pill as companion apps */
+.topbar{display:flex;flex-direction:column;align-items:stretch;gap:10px;background:#073b4c;padding:18px clamp(18px,4vw,48px) 25px}
+.topbar .header-actions{width:100%;display:flex;justify-content:flex-start;align-items:center;margin:0 0 6px}
+.topbar .hub-return{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 16px;border:1px solid #6b9eae;border-radius:999px;background:#075975;color:#fff;text-decoration:none;font-weight:700;box-shadow:none}
+.topbar .hub-return:hover{background:#0b6b88}.topbar .hub-return:focus-visible{outline:3px solid #a8deed;outline-offset:3px}
+.topbar .title-copy{width:100%}
