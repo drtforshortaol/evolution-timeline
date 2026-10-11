@@ -100,3 +100,22 @@ main{max-width:1120px;margin:auto;padding:22px clamp(14px,3vw,28px) 40px}.contro
  #storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{padding:13px 7px 24px}
  #storyView .lineage-pillars>.story-accordion:not([open]) .story-summary strong{font-size:.93rem}
 }
+
+/* Story core spine and branch events: prominent, readable color coding */
+@media(min-width:980px){main{max-width:1360px}#storyView .spine .event-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}}
+#storyView .spine .event-accordion{min-height:116px;border-width:2px;border-left-width:9px}
+#storyView .spine .event-accordion>summary{min-height:116px;padding:22px 26px;gap:18px}
+#storyView .spine .event-accordion .event-summary-inner{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center}
+#storyView .spine .event-accordion .event-title{font-size:clamp(1.1rem,1.65vw,1.35rem)}
+#storyView .spine .event-accordion .date{font-size:.95rem}
+#storyView .spine .cosmic-event{background:linear-gradient(125deg,#efeafb,#ddd5f6);border-color:#6853ab;color:#1d2145}
+#storyView .spine .earth-event{background:linear-gradient(125deg,#e2f4ed,#cbeade);border-color:#187c65;color:#193b30}
+#storyView .spine .bacteria-event{background:linear-gradient(125deg,#fff1dc,#f4deb7);border-color:#a96316;color:#493113}
+#storyView .spine .cosmic-event .event-title,#storyView .spine .earth-event .event-title,#storyView .spine .bacteria-event .event-title{color:inherit}
+#storyView .spine .cosmic-event .date,#storyView .spine .earth-event .date,#storyView .spine .bacteria-event .date{color:inherit;opacity:.85}
+#storyView .spine .event-accordion[open]{grid-column:1/-1}
+#storyView .lineage-pillars .story-body .event-accordion{border-left-width:7px}
+#storyView .lineage-pillars .brown-shell .event-accordion{border-left-color:#ad693f;background:color-mix(in srgb,var(--panel) 85%,#dfaa7c)}
+#storyView .lineage-pillars .plastid-shell .event-accordion{border-left-color:#188250;background:color-mix(in srgb,var(--panel) 85%,#9bdfb3)}
+#storyView .lineage-pillars .animals-shell .event-accordion{border-left-color:#3c68b2;background:color-mix(in srgb,var(--panel) 85%,#a4c1f8)}
+@media(max-width:979px){#storyView .spine .event-list{grid-template-columns:1fr}}
