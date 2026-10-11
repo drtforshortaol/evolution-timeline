@@ -81,3 +81,22 @@ main{max-width:1120px;margin:auto;padding:22px clamp(14px,3vw,28px) 40px}.contro
 .topbar .hub-return{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 16px;border:1px solid #6b9eae;border-radius:999px;background:#075975;color:#fff;text-decoration:none;font-weight:700;box-shadow:none}
 .topbar .hub-return:hover{background:#0b6b88}.topbar .hub-return:focus-visible{outline:3px solid #a8deed;outline-offset:3px}
 .topbar .title-copy{width:100%}
+
+/* Wider, visually distinct lineage cards, with centered headings */
+@media(min-width:821px){
+  #storyView .group-grid.lineage-pillars{width:calc(100% + 38px);margin-left:-19px;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+}
+#storyView .lineage-pillars>.story-accordion:not([open]){min-height:215px;border-width:2px;border-left-width:9px}
+#storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{min-height:215px;padding:20px 14px;justify-content:center;gap:8px;text-align:center;position:relative}
+#storyView .lineage-pillars>.story-accordion:not([open])>.story-summary>span:first-child{align-items:center;justify-content:center;flex:1;gap:12px}
+#storyView .lineage-pillars>.story-accordion:not([open]) .story-arrow{position:absolute;right:11px;bottom:12px}
+#storyView .lineage-pillars>.brown-shell:not([open]){border-color:#ad693f;background:linear-gradient(155deg,#faece2,#f3e0d4)}
+#storyView .lineage-pillars>.plastid-shell:not([open]){border-color:#188250;background:linear-gradient(155deg,#e1f5e8,#cfebdb)}
+#storyView .lineage-pillars>.animals-shell:not([open]){border-color:#3c68b2;background:linear-gradient(155deg,#e6eeff,#d8e5fa)}
+#storyView .lineage-pillars>.story-accordion:not([open]) .story-summary strong{color:#132a3d}
+#storyView .lineage-pillars>.story-accordion:not([open]) .story-summary small{color:#465c70}
+@media(max-width:670px){
+ #storyView .lineage-pillars>.story-accordion:not([open]),#storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{min-height:190px}
+ #storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{padding:13px 7px 24px}
+ #storyView .lineage-pillars>.story-accordion:not([open]) .story-summary strong{font-size:.93rem}
+}
