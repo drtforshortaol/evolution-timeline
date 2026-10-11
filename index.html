@@ -18,22 +18,20 @@
       <h1>From Universe to Us</h1>
       <p class="subtitle">Follow the evolutionary story by group, then switch to a strict-time map to see when everything happened relative to everything else.</p>
     </div>
-    <div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap">
-      <a href="https://drtforshortaol.github.io/MBA-hub/" style="display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 12px;border-radius:10px;background:#fff;color:#0f172a;text-decoration:none;font-weight:800">← MBA Hub</a>
+    <div class="header-actions">
+      <a href="https://drtforshortaol.github.io/MBA-hub/" class="hub-return">← MBA Hub</a>
       <button id="installBtn" class="install" hidden>Install app</button>
     </div>
   </header>
 
   <main>
     <section class="controls" aria-label="Timeline controls">
-      <div class="segmented" role="group" aria-label="View mode">
-        <button class="mode active" data-view="story">Story by Groups</button>
-        <button class="mode" data-view="time">Strict Time Map</button>
-      </div>
-      <label class="switch"><input id="contextToggle" type="checkbox" checked><span>Show cosmic / Earth / human context</span></label>
-      <label class="switch"><input id="uncertaintyToggle" type="checkbox" checked><span>Show uncertainty notes</span></label>
-      <button id="expandAll" class="ghost">Expand all Learn More</button>
-      <button id="refreshApp" class="ghost" type="button">Refresh / Check for Updates</button>
+      <div class="view-picker"><strong class="view-picker-title">Choose a view</strong><div class="segmented" role="group" aria-label="Two timeline views">
+        <button class="mode active" data-view="story">1 · Story by Groups</button>
+        <button class="mode" data-view="time">2 · Strict Time Map</button>
+      </div><p class="view-hint">Two ways to explore: follow related evolutionary stories or compare events in chronological order.</p></div>
+<label class="switch"><input id="uncertaintyToggle" type="checkbox" checked><span>Show uncertainty notes</span></label>
+<button id="refreshApp" class="ghost" type="button">Refresh / Check for Updates</button>
       <span id="updateStatus" class="update-status" role="status" aria-live="polite"></span>
     </section>
 
