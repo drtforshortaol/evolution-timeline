@@ -119,5 +119,4 @@ function configureClosingAccordions(){const panels=[...toolsView.querySelectorAl
 configureClosingAccordions();
 
 document.querySelectorAll('.mode').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.mode').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const view=btn.dataset.view;storyView.hidden=view!=='story';timeView.hidden=view!=='time';toolsView.hidden=view!=='tools';}));
-let deferredPrompt;const installBtn=document.getElementById('installBtn');window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;installBtn.hidden=false});installBtn.addEventListener('click',async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;installBtn.hidden=true});
 if('serviceWorker'in navigator){window.addEventListener('load',async()=>{try{const reg=await navigator.serviceWorker.register('./sw.js');if(navigator.onLine)await reg.update()}catch(_){}})}
