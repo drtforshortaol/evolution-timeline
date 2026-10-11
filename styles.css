@@ -144,3 +144,14 @@ main{max-width:1120px;margin:auto;padding:22px clamp(14px,3vw,28px) 40px}.contro
  #storyView .lineage-pillars>.story-accordion:not([open]),#storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{min-height:120px}
  #storyView .lineage-pillars>.story-accordion:not([open])>.story-summary{padding:8px 5px 16px}
 }
+
+/* Branch continuity: expanded panels remain anchored to their own lineage lanes */
+@media(min-width:821px){
+ #storyView .lineage-pillars>.story-accordion[open]{min-width:0;max-width:100%}
+ #storyView .lineage-pillars>.brown-shell[open]{grid-column:1 / span 2;justify-self:start;width:88%}
+ #storyView .lineage-pillars>.plastid-shell[open]{grid-column:1 / -1;justify-self:center;width:72%}
+ #storyView .lineage-pillars>.animals-shell[open]{grid-column:2 / span 2;justify-self:end;width:88%}
+}
+@media(max-width:820px){
+ #storyView .lineage-pillars>.story-accordion[open]{grid-column:1 / -1;width:100%;justify-self:stretch}
+}
