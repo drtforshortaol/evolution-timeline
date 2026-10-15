@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "0.1-proposal",
+  "featureKey": "independent-primary-endosymbiosis-paulinella",
+  "title": "Evolution Happened Again",
+  "targetApplication": "EVO-v2",
+  "excludedApplications": [
+    "MBA-hub-v2",
+    "MBA-hub",
+    "MBA-hub-v2-test"
+  ],
+  "status": "content-staged-scientific-review-pending",
+  "publicationAuthorized": false,
+  "canonicalIdentifier": null,
+  "interpretation": {
+    "summary": "Photosynthetic Paulinella evolved chromatophores through a separate primary cyanobacterial endosymbiosis from the one ancestral to Archaeplastida plastids.",
+    "host": "Rhizarian amoeba in the Paulinella lineage",
+    "endosymbiont": "Cyanobacterium related to the Synechococcus–Prochlorococcus group",
+    "product": "Chromatophore, a photosynthetic organelle",
+    "time": "Estimates vary substantially; do not hard-code a single acquisition date.",
+    "ancestryRule": "No phylogenetic descent edge connects Paulinella chromatophores to Archaeplastida plastids. Similar process is not common plastid ancestry.",
+    "evidence": [
+      "Reductions in chromatophore genome relative to free-living cyanobacteria",
+      "Host-encoded proteins imported into chromatophores",
+      "Cell cycle and chromatophore inheritance coordinated"
+    ]
+  },
+  "diagram": {
+    "primaryPathway": [
+      "Ancestral eukaryotic host",
+      "Primary cyanobacterial endosymbiosis",
+      "Archaeplastida plastids"
+    ],
+    "independentPathway": [
+      "Ancestral Paulinella (Rhizaria)",
+      "Independent cyanobacterial endosymbiosis",
+      "Paulinella chromatophores"
+    ],
+    "connectionType": "conceptual-parallel-not-lineage-ancestor"
+  },
+  "references": [
+    {
+      "title": "Genomics-Informed Insights into Endosymbiotic Organelle Evolution in Photosynthetic Eukaryotes",
+      "url": "https://doi.org/10.1146/annurev-arplant-042817-040209"
+    },
+    {
+      "title": "Paulinella, a Model for Understanding Plastid Primary Endosymbiosis",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7734844/"
+    },
+    {
+      "title": "Protein import into bacterial endosymbionts and evolving organelles",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12176269/"
+    }
+  ],
+  "review": {
+    "scopeApprovedForEvoV2": true,
+    "independentScientificReviewComplete": false,
+    "finalTextApproved": false,
+    "integratedIntoRuntime": false
+  }
+}
