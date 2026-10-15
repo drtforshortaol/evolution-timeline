@@ -1,0 +1,20 @@
+name: EVO V2 science staging guard
+on:
+  push:
+    branches: [evo-v2-paulinella-science-staging-20261015]
+    paths:
+      - 'evo-v2-staging/**'
+      - '.github/workflows/evo-v2-staging.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-paulinella:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate EVO-only science content
+        run: python3 evo-v2-staging/validation/check_paulinella.py
