@@ -18,3 +18,9 @@ jobs:
           python-version: '3.12'
       - name: Validate EVO-only science content
         run: python3 evo-v2-staging/validation/check_paulinella.py
+      - name: Check preview module syntax
+        run: |
+          node --check evo-v2-staging/app/main.js
+          node --check evo-v2-staging/app/science.js
+      - name: Verify preview isolation and wiring
+        run: python3 evo-v2-staging/validation/check_preview.py
