@@ -28,3 +28,5 @@ jobs:
         run: python3 evo-v2-staging/validation/validate_migration_schema.py
       - name: Run migration negative regressions
         run: python3 -m unittest discover -s evo-v2-staging/validation -p 'test_*.py' -v
+      - name: Verify legacy inventory completeness and approval isolation
+        run: python3 evo-v2-staging/validation/validate_legacy_inventory.py
