@@ -11,7 +11,7 @@ class MigrationSchemaTests(unittest.TestCase):
     def test_pending_science(self): self.assertTrue(validate(record()))
     def test_approved_science_needs_evidence(self):
         with self.assertRaises(AssertionError): validate(record(approval="approved"))
-    def test_evidenced_science(self): self.assertTrue(validate(record(approval="approved",evidence=["doi:example"]))
+    def test_evidenced_science(self): self.assertTrue(validate(record(approval="approved",evidence=["doi:example"])))
     def test_navigation_never_canonical(self):
         with self.assertRaises(AssertionError): validate(record(kind="navigation",approval="approved"))
     def test_duplicate_ids(self):
