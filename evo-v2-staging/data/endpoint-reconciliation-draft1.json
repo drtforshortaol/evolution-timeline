@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "status": "endpoint-reconciliation-pending",
+  "source": {
+    "repository": "drtforshortaol/MBA-hub-v2",
+    "path": "docs/evo-v2-transition-endpoint-manifest-draft1-20261014.json",
+    "blob_sha": "e55005735df4e4b8f9daf2fd50cd17e3387c2cc0"
+  },
+  "transitions": [
+    {
+      "id": "TR-0100",
+      "source_key": "great-split",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0101",
+      "source_key": "bacterial-diversification",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0102",
+      "source_key": "archaeal-diversification",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0103",
+      "source_key": "toward-host",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0104",
+      "source_key": "endosymbiosis",
+      "legacy_relationship_type": "merger",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0105",
+      "source_key": "eukaryogenesis",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0106",
+      "source_key": "toward-leca",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0107",
+      "source_key": "major-euk-div",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0108",
+      "source_key": "opisthokont-select-transition",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0109",
+      "source_key": "opisthokont-branch",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0110",
+      "source_key": "archaeplastida-select-transition",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0111",
+      "source_key": "archaeplastida-summary-branch",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0112",
+      "source_key": "green-to-land-summary",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0113",
+      "source_key": "sar-select-transition",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0114",
+      "source_key": "sar-branch",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0115",
+      "source_key": "brown-summary-transition",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0116",
+      "source_key": "cyano-branch",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0117",
+      "source_key": "oxygenic-photosynthesis",
+      "legacy_relationship_type": "innovation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0118",
+      "source_key": "cyano-continuation",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0119",
+      "source_key": "planetary-effect",
+      "legacy_relationship_type": "planetary-effect",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0120",
+      "source_key": "primary-plastid-endo",
+      "legacy_relationship_type": "merger",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0121",
+      "source_key": "plastid-integration",
+      "legacy_relationship_type": "integration",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0122",
+      "source_key": "archaeplastida-diversification",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0123",
+      "source_key": "red-lineage-transition",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0124",
+      "source_key": "red-seaweed-diversification",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0125",
+      "source_key": "green-diversification",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0126",
+      "source_key": "land-transition",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0127",
+      "source_key": "vascular-transition",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0128",
+      "source_key": "seed-transition",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0129",
+      "source_key": "flower-transition",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0130",
+      "source_key": "seagrass-transition",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0131",
+      "source_key": "eelgrass-transition",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0132",
+      "source_key": "stramenopile-branch",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0133",
+      "source_key": "red-derived-plastid",
+      "legacy_relationship_type": "secondary-endosymbiosis",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0134",
+      "source_key": "brown-branch",
+      "legacy_relationship_type": "branching",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0135",
+      "source_key": "kelp-transition",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    },
+    {
+      "id": "TR-0136",
+      "source_key": "giant-kelp-transition",
+      "legacy_relationship_type": "continuation",
+      "source_concept_ids": null,
+      "target_concept_ids": null,
+      "evidence_status": "endpoint-unverified",
+      "approval": "pending"
+    }
+  ]
+}
