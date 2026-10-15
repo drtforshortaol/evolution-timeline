@@ -24,3 +24,5 @@ jobs:
           node --check evo-v2-staging/app/science.js
       - name: Verify preview isolation and wiring
         run: python3 evo-v2-staging/validation/check_preview.py
+      - name: Validate EVO migration candidate schema
+        run: python3 evo-v2-staging/validation/validate_migration_schema.py
